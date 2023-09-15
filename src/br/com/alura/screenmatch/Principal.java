@@ -1,8 +1,12 @@
+package br.com.alura.screenmatch;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
@@ -39,6 +43,20 @@ public class Principal {
         episodio.setSerie(suits);
         episodio.setTotalVisualizacoes(300);
         filtroRecomendacao.filtra(episodio);
+
+        var maisUmFilme = new Filme();
+        maisUmFilme.setNome("Interstelar");
+        maisUmFilme.setDiretor("Christpher Nolan");
+        maisUmFilme.setAnoDeLancamento(2014);
+        maisUmFilme.setDuracaoEmMinutos(180);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+
+        listaDeFilmes.add(filme1);
+        listaDeFilmes.add(maisUmFilme);
+
+        System.out.println("Quantidade de filmes na lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme da lista: " + listaDeFilmes.get(0).getNome());
 
 
     }
