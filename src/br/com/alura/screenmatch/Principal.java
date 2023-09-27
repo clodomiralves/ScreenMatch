@@ -10,8 +10,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme filme1 = new Filme("Top Gun");
-        filme1.setAnoDeLancamento(1998);
+        Filme filme1 = new Filme("Top Gun", 1998);
         filme1.setDuracaoEmMinutos(120);
         filme1.setIncluidoNoPlano(true);
 
@@ -22,9 +21,8 @@ public class Principal {
         filme1.exibeFichaTecnica();
 
 
-        Serie suits = new Serie();
+        Serie suits = new Serie("Suits", 2004);
 
-        suits.setNome("Suits");
         suits.setTemporadas(9);
         suits.setMinutosPorEpisodio(70);
         suits.setEpisodiosPorTemporadas(10);
@@ -43,9 +41,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtroRecomendacao.filtra(episodio);
 
-        var maisUmFilme = new Filme("Intersetelar");
+        var maisUmFilme = new Filme("Intersetelar", 2014);
         maisUmFilme.setDiretor("Christpher Nolan");
-        maisUmFilme.setAnoDeLancamento(2014);
         maisUmFilme.setDuracaoEmMinutos(180);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
